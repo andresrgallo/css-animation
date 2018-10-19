@@ -1,7 +1,7 @@
 body {
   background-color: #f0f7fa;
   animation-name: sky;
-  animation-duration: 15s;
+  animation-duration: 11s;
   height: 100vh;
   margin: 0;
 }
@@ -15,32 +15,95 @@ body {
   top: 20px;
   left: 5%;
   animation-name: sunmove;
-  animation-duration: 15s;
+  animation-duration: 11s;
 }
 
 .island {
   position: absolute;
   margin: auto;
-  background-image: linear-gradient(#66c449, #f9dd0e);
+  background-color: #66c449;
   top: 20%;
   bottom: 0px;
   width: 40%;
   height: 10%;
   border-radius: 50%;
   animation-name: island;
-  animation-duration: 15s;
+  animation-duration: 11s;
+  z-index: 0;
+}
+
+.beach {
+  position: absolute;
+  margin: auto;
+  background-color: #f6fac6;
+  top: 20%;
+  bottom: 0px;
+  width: 40%;
+  height: 2%;
+  border-radius: 50%;
+  animation-name: beach;
+  animation-duration: 11s;
+  z-index: 1;
 }
 
 .ocean {
   position: absolute;
   margin: auto;
-  background-image: linear-gradient(#40819e, #31637a, #142831);
+  background-color: #40819e;
   top: 60%;
   bottom: 0px;
   width: 100%;
   height: 40%;
   animation-name: ocean;
-  animation-duration: 15s;
+  animation-duration: 11s;
+  z-index: 2;
+}
+
+.palm2 {
+  position: absolute;
+  margin: auto;
+  background-image: linear-gradient(#cc5b00, #aa4c00, #883d00, #662e00);
+  top: 10%;
+  bottom: 0px;
+  width: 1.1%;
+  height: 15%;
+  margin-left: 14.7%;
+  border-radius: 15%;
+  animation-name: palm;
+  animation-duration: 11s;
+}
+
+.palm2top1 {
+  position: absolute;
+  margin: auto;
+  top: -2%;
+  right: 73.5%;
+  bottom: 0;
+  left: 0;
+  width: 4%;
+  height: 7%;
+  transform: rotate(-100deg);
+  background-color: transparent;
+  border-radius: 50px;
+  box-shadow: 1.2rem 0.3rem 0 0 #5aac04;
+  animation-name: palm1top1;
+  animation-duration: 11s;
+}
+.palm2top2 {
+  position: absolute;
+  margin: auto;
+  top: -2%;
+  right: 65.5%;
+  bottom: 0;
+  left: 0;
+  width: 4%;
+  height: 6%;
+  transform: rotate(40deg);
+  background-color: transparent;
+  border-radius: 48%;
+  box-shadow: -1.2rem -0.7rem 0 0 #6aa72a;
+  animation-name: palm1top2;
+  animation-duration: 11s;
 }
 
 .palm1 {
@@ -54,43 +117,83 @@ body {
   margin-left: 9.7%;
   border-radius: 15%;
   animation-name: palm;
-  animation-duration: 5s;
-  animation-iteration-count: 3;
+  animation-duration: 11s;
 }
 
 .palmtop1 {
   position: absolute;
   margin: auto;
-  top: 0;
-  right: 83%;
+  top: -2%;
+  right: 83.5%;
   bottom: 0;
   left: 0;
-  width: 5%;
-  height: 5%;
-  transform: rotate(-90deg);
+  width: 4%;
+  height: 7%;
+  transform: rotate(-100deg);
   background-color: transparent;
   border-radius: 50px;
-  box-shadow: 10px 1px 0 0 #5aac04;
+  box-shadow: 1.2rem 0.3rem 0 0 #5aac04;
   animation-name: palm1top1;
-  animation-duration: 5s;
-  animation-iteration-count: 3;
+  animation-duration: 11s;
 }
 .palmtop2 {
   position: absolute;
   margin: auto;
-  top: -1%;
-  right: 75%;
+  top: -2%;
+  right: 75.5%;
   bottom: 0;
   left: 0;
-  width: 5%;
-  height: 5%;
-  transform: rotate(-130deg);
+  width: 4%;
+  height: 6%;
+  transform: rotate(40deg);
   background-color: transparent;
-  border-radius: 50%;
-  box-shadow: 10px 2px 0 0 #6aa72a;
+  border-radius: 48%;
+  box-shadow: -1.2rem -0.7rem 0 0 #6aa72a;
   animation-name: palm1top2;
-  animation-duration: 5s;
-  animation-iteration-count: 3;
+  animation-duration: 11s;
+}
+
+.lighthouse {
+  position: absolute;
+  margin: auto;
+  top: -10%;
+  right: 50%;
+  bottom: 0;
+  left: 0;
+  width: 4%;
+  border-bottom: 10rem solid white;
+  border-left: 0.8rem solid transparent;
+  border-right: 0.8rem solid transparent;
+  height: 0;
+  width: 0.6rem;
+  z-index: -1;
+}
+
+.lgentrance {
+  position: relative;
+  top: 8rem;
+  left: 0rem;
+  width: 0.8rem;
+  height: 2.2rem;
+  background-color: brown;
+  border-radius: 10px;
+  z-index: 0;
+}
+
+.light {
+  position: absolute;
+  margin: auto;
+  top: -20%;
+  right: 9%;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 0;
+  border-top: 0rem solid transparent;
+  border-right: 600px solid #f0f7fa;
+  border-bottom: 50px solid transparent;
+  animation-name: light;
+  animation-duration: 11s;
 }
 
 /* ----- Animations ----- */
@@ -112,7 +215,7 @@ body {
   0% {
     background-color: #f0f7fa;
   }
-  50% {
+  5r0% {
     background-color: #7dbbd4;
   }
   100% {
@@ -122,60 +225,65 @@ body {
 
 @keyframes ocean {
   0% {
-    background-image: linear-gradient(#6eaac4, #31637a, #142831);
-  }
-  50% {
-    background-image: linear-gradient(#31637a, #142831, #0f1e25);
+    background-color: #6eaac4;
   }
   100% {
-    background-image: linear-gradient(#142831, #0f1e25, #050b0d);
+    background-color: #0f1e25;
   }
 }
 
 @keyframes island {
   0% {
-    background-image: linear-gradient(#66c449, #f9dd0e);
-  }
-  50% {
-    background-image: linear-gradient(#438b2d, #9a8003);
+    background-color: #66c449;
   }
   100% {
-    background-image: linear-gradient(#12240c, #251f01);
+    background-color: #12240c;
+    linear-gradient: rgba(0, 0, 0, 0.7);
+    filter: brightness(50%);
   }
 }
 
 @keyframes palm {
   0% {
-    transform: rotate(0deg);
-  }
-  5r0% {
-    transform: rotate(2.5deg);
+    filter: brightness(100%);
   }
   100% {
-    transform: rotate(5deg);
+    filter: brightness(20%);
   }
 }
 
 @keyframes palm1top1 {
   0% {
-    transform: rotate(-90deg);
-  }
-  5r0% {
-    transform: rotate(-85deg);
+    filter: brightness(100%);
   }
   100% {
-    transform: rotate(-80deg);
+    filter: brightness(20%);
   }
 }
 
 @keyframes palm1top2 {
   0% {
-    transform: rotate(-130deg);
-  }
-  5r0% {
-    transform: rotate(-120deg);
+    filter: brightness(100%);
   }
   100% {
-    transform: rotate(-110deg);
+    filter: brightness(20%);
+  }
+}
+
+@keyframes light {
+  0% {
+    opacity: 0;
+    border-right: 600px solid #f0f7fa;
+  }
+  5i0% {
+    opacity: 0.2;
+    border-right: 300px solid #f0f7fa;
+    right: 35%;
+  }
+  100% {
+    opacity: 0.7;
+    border-right: 10px solid #fff;
+    right: 50%;
+    border-bottom: 20px solid transparent;
   }
 }
