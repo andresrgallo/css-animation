@@ -49,12 +49,13 @@ body {
   background-image: linear-gradient(#cc5b00, #aa4c00, #883d00, #662e00);
   top: 10%;
   bottom: 0px;
-  width: 1%;
+  width: 1.1%;
   height: 15%;
-  margin-left: 10%;
-  animation-name: palm;
-  animation-duration: s;
+  margin-left: 9.7%;
   border-radius: 15%;
+  animation-name: palm;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
 }
 
 .palmtop1 {
@@ -70,12 +71,15 @@ body {
   background-color: transparent;
   border-radius: 50px;
   box-shadow: 10px 1px 0 0 #5aac04;
+  animation-name: palm1top1;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
 }
 .palmtop2 {
   position: absolute;
   margin: auto;
   top: -1%;
-  right: 74.3%;
+  right: 75%;
   bottom: 0;
   left: 0;
   width: 5%;
@@ -84,6 +88,9 @@ body {
   background-color: transparent;
   border-radius: 50%;
   box-shadow: 10px 2px 0 0 #6aa72a;
+  animation-name: palm1top2;
+  animation-duration: 5s;
+  animation-iteration-count: 3;
 }
 
 /* ----- Animations ----- */
@@ -93,11 +100,6 @@ body {
     top: 20px;
     left: 5%;
     opacity: 1;
-  }
-  50% {
-    top: 100px;
-    left: 50%;
-    opacity: 0.71;
   }
   100% {
     top: 200px;
@@ -139,5 +141,41 @@ body {
   }
   100% {
     background-image: linear-gradient(#12240c, #251f01);
+  }
+}
+
+@keyframes palm {
+  0% {
+    transform: rotate(0deg);
+  }
+  5r0% {
+    transform: rotate(2.5deg);
+  }
+  100% {
+    transform: rotate(5deg);
+  }
+}
+
+@keyframes palm1top1 {
+  0% {
+    transform: rotate(-90deg);
+  }
+  5r0% {
+    transform: rotate(-85deg);
+  }
+  100% {
+    transform: rotate(-80deg);
+  }
+}
+
+@keyframes palm1top2 {
+  0% {
+    transform: rotate(-130deg);
+  }
+  5r0% {
+    transform: rotate(-120deg);
+  }
+  100% {
+    transform: rotate(-110deg);
   }
 }
